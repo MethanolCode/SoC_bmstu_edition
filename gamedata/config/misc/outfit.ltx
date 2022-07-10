@@ -6,12 +6,11 @@ additional_inventory_weight2	= 0		;	+40 kg
 full_icon_name					= npc_icon_without_outfit
 
 [without_outfit]:outfit_base
-;базовый костюм сталкера - костюм новичка. обычнаЯ одежда туриста - штормовка+сапоги
 full_scale_icon		= 6,6
 
 
 ;---------------------------------------------------------------------------------------------
-;		Ккостюм новичка
+;		ГЉГЄГ®Г±ГІГѕГ¬ Г­Г®ГўГЁГ·ГЄГ 
 ;---------------------------------------------------------------------------------------------
 [novice_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -38,7 +37,7 @@ full_icon_name		= npc_icon_novice_outfit
 
 cost				=7700
 slot				= 6
-full_scale_icon		= 0,11		;иконка сталкера в костюме в полный рост
+full_scale_icon		= 0,11
 
 immunities_sect			= sect_novice_outfit_immunities
 
@@ -56,7 +55,7 @@ fire_wound_protection  			=0.05
 bones_koeff_protection = kurtka_mask_damage
 
 [sect_novice_outfit_immunities]
-burn_immunity				=0.04	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.04
 strike_immunity				=0.02
 shock_immunity				=0.04
 wound_immunity				=0.03
@@ -67,7 +66,7 @@ explosion_immunity			=0.04
 fire_wound_immunity			=0.02
 
 ;---------------------------------------------------------------------------------------------
-;		КбандитскаЯ куртка
+;		ГЉГЎГ Г­Г¤ГЁГІГ±ГЄГ Гџ ГЄГіГ°ГІГЄГ 
 ;---------------------------------------------------------------------------------------------
 [bandit_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -93,7 +92,7 @@ full_icon_name		= npc_icon_bandit_outfit
 
 cost				=11000
 slot				= 6
-full_scale_icon		= 0,6			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 0,6
 
 immunities_sect			= sect_bandit_outfit_immunities
 
@@ -106,12 +105,12 @@ radiation_protection 			=0.0
 telepatic_protection 			=0.0
 chemical_burn_protection 		=0.1
 explosion_protection 			=0.1
-fire_wound_protection  			=0.1
+fire_wound_protection  			=0.09
 
 bones_koeff_protection = kurtka_antigas_damage
 
 [sect_bandit_outfit_immunities]
-burn_immunity				=0.04	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.04
 strike_immunity				=0.01
 shock_immunity				=0.04
 wound_immunity				=0.03
@@ -123,7 +122,7 @@ fire_wound_immunity			=0.02
 
 
 ;---------------------------------------------------------------------------------------------
-;		КОСТЮМ НАЕМНИКА
+;		ГЉГЋГ‘Г’ГћГЊ ГЌГЂГ…ГЊГЌГ€ГЉГЂ
 ;---------------------------------------------------------------------------------------------
 [killer_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -148,40 +147,40 @@ inv_grid_x			= 4
 inv_grid_y			= 15
 full_icon_name		= npc_icon_killer_outfit
 
-cost				=6000
-full_scale_icon		= 4,11			;иконка сталкера в костюме в полный рост
+cost				=19700
+full_scale_icon		= 4,11
 
 immunities_sect			= sect_killer_outfit_immunities
 
 ; LOW RESISTANCE
-burn_protection 				=0.3
-strike_protection 				=0.2
-shock_protection 				=0.3
-wound_protection				=0.3
-radiation_protection 			=0.3
+burn_protection 				=0.25
+strike_protection 				=0.23
+shock_protection 				=0.25
+wound_protection				=0.2
+radiation_protection 			=0.15
 telepatic_protection 			=0.0
 chemical_burn_protection 		=0.2
-explosion_protection 			=0.25
-fire_wound_protection  			=0.2
+explosion_protection 			=0.2
+fire_wound_protection  			=0.15
 
 bones_koeff_protection = gilet_antigas_damage
 
 [sect_killer_outfit_immunities]
-burn_immunity				=0.04	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.04
 strike_immunity				=0.01
-shock_immunity				=0.04
-wound_immunity				=0.020
-radiation_immunity			=0.00
+shock_immunity				=0.03
+wound_immunity				=0.02
+radiation_immunity			=0.0001
 telepatic_immunity			=0.00
-chemical_burn_immunity		=0.04
+chemical_burn_immunity		=0.05
 explosion_immunity			=0.04
-fire_wound_immunity			=0.012
+fire_wound_immunity			=0.015
 
 
 
 
 ;---------------------------------------------------------------------------------------------
-;		КОСТЮМ МОНОЛИТОВЦА
+;		ГЉГЋГ‘Г’ГћГЊ ГЊГЋГЌГЋГ‹Г€Г’ГЋГ‚Г–ГЂ
 ;---------------------------------------------------------------------------------------------
 [monolit_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -207,7 +206,7 @@ full_icon_name		= npc_icon_monolit_outfit
 
 cost				=10000
 slot				= 6
-full_scale_icon		= 6,11			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 6,11
 
 immunities_sect			= sect_monolit_outfit_immunities
 
@@ -225,7 +224,7 @@ fire_wound_protection  			=0.4
 bones_koeff_protection = kombez_mask_damage
 
 [sect_monolit_outfit_immunities]
-burn_immunity				=0.03	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.03	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.03
 wound_immunity				=0.015
@@ -238,7 +237,7 @@ fire_wound_immunity			=0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		КОСТЮМ ВОЕННОГО СПЕЦНАЗА
+;		ГЉГЋГ‘Г’ГћГЊ Г‚ГЋГ…ГЌГЌГЋГѓГЋ Г‘ГЏГ…Г–ГЌГЂГ‡ГЂ
 ;---------------------------------------------------------------------------------------------
 [specops_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -265,7 +264,7 @@ nightvision_sect	= effector_nightvision_bad
 
 cost				=12000
 slot				= 6
-full_scale_icon		= 4,6			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 4,6			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_specops_outfit_immunities
 
@@ -283,7 +282,7 @@ fire_wound_protection  			=0.45
 bones_koeff_protection = kombez_helmet_damage
 
 [sect_specops_outfit_immunities]
-burn_immunity				=0.04	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.04	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.04
 wound_immunity				=0.015
@@ -297,7 +296,7 @@ fire_wound_immunity			=0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		КОСТЮМ МИЛИТАРИ
+;		ГЉГЋГ‘Г’ГћГЊ ГЊГ€Г‹Г€Г’ГЂГђГ€
 ;---------------------------------------------------------------------------------------------
 [military_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -324,7 +323,7 @@ full_icon_name		= npc_icon_military_outfit
 nightvision_sect	= effector_nightvision_bad
 
 cost				=40000
-full_scale_icon		= 10,6		;иконка сталкера в костюме в полный рост
+full_scale_icon		= 10,6		;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_military_outfit_immunities
 
@@ -342,7 +341,7 @@ fire_wound_protection  			=0.55
 bones_koeff_protection =	armor_helmet_damage
 
 [sect_military_outfit_immunities]
-burn_immunity				=0.02	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.02	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.02
 wound_immunity				=0.01
@@ -356,7 +355,7 @@ fire_wound_immunity			=0.005
 
 
 ;---------------------------------------------------------------------------------------------
-;		КОСТЮМ НЕЙТРАЛЬНОГО СТАЛКЕРА
+;		ГЉГЋГ‘Г’ГћГЊ ГЌГ…Г‰Г’ГђГЂГ‹ГњГЌГЋГѓГЋ Г‘Г’ГЂГ‹ГЉГ…ГђГЂ
 ;---------------------------------------------------------------------------------------------
 [stalker_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -382,7 +381,7 @@ full_icon_name		= npc_icon_stalker_outfit
 
 cost				=15000
 slot				= 6
-full_scale_icon		= 14,11			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 14,11			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 nightvision_sect				= effector_nightvision_bad
 
 immunities_sect			= sect_stalker_outfit_immunities
@@ -403,7 +402,7 @@ power_loss = 0.87
 bones_koeff_protection = gilet_antigas_damage
 
 [sect_stalker_outfit_immunities]
-burn_immunity				=0.03	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.03	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.03
 wound_immunity				=0.015
@@ -416,7 +415,7 @@ fire_wound_immunity			=0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		НАУЧНЫЙ КОСТЮМ НЕЙТРАЛЬНОГО СТАЛКЕРА
+;		ГЌГЂГ“Г—ГЌГ›Г‰ ГЉГЋГ‘Г’ГћГЊ ГЌГ…Г‰Г’ГђГЂГ‹ГњГЌГЋГѓГЋ Г‘Г’ГЂГ‹ГЉГ…ГђГЂ
 ;---------------------------------------------------------------------------------------------
 [scientific_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -443,7 +442,7 @@ full_icon_name		= npc_icon_scientific_outfit
 nightvision_sect	= effector_nightvision_good
 
 cost				=30000
-full_scale_icon		= 12,11			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 12,11			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_scientific_outfit_immunities
 
@@ -462,7 +461,7 @@ fire_wound_protection  			=0.40
 bones_koeff_protection = kombez_kupol_damage
 
 [sect_scientific_outfit_immunities]
-burn_immunity				=0.03	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.03	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.03
 wound_immunity				=0.015
@@ -475,7 +474,7 @@ fire_wound_immunity			=0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		ЭКЗОСКЕЛЕТ НЕЙТРАЛЬНОГО СТАЛКЕРА
+;		ГќГЉГ‡ГЋГ‘ГЉГ…Г‹Г…Г’ ГЌГ…Г‰Г’ГђГЂГ‹ГњГЌГЋГѓГЋ Г‘Г’ГЂГ‹ГЉГ…ГђГЂ
 ;---------------------------------------------------------------------------------------------
 [exo_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -502,7 +501,7 @@ full_icon_name		= npc_icon_exo_outfit
 nightvision_sect	= effector_nightvision_bad
 
 cost				=50000
-full_scale_icon		= 2,11			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 2,11			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_exo_outfit_immunities
 
@@ -517,14 +516,14 @@ chemical_burn_protection 		=0.5
 explosion_protection 			=0.8
 fire_wound_protection  			=0.60
 
-;запрещение режима Sprint для Актера
+;Г§Г ГЇГ°ГҐГ№ГҐГ­ГЁГҐ Г°ГҐГ¦ГЁГ¬Г  Sprint Г¤Г«Гї ГЂГЄГІГҐГ°Г 
 sprint_allowed					= false
 bones_koeff_protection			= exo_helmet_damage
 additional_inventory_weight		= 20
 additional_inventory_weight2	= 20 ; 40+
 
 [sect_exo_outfit_immunities]
-burn_immunity				=0.03	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.03	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.03
 wound_immunity				=0.01
@@ -538,7 +537,7 @@ fire_wound_immunity			=0.005
 
 
 ;---------------------------------------------------------------------------------------------
-;		ЛЕГКИЙ КОСТЮМ СВОБОДЫ
+;		Г‹Г…ГѓГЉГ€Г‰ ГЉГЋГ‘Г’ГћГЊ Г‘Г‚ГЋГЃГЋГ„Г›
 ;---------------------------------------------------------------------------------------------
 [svoboda_light_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -564,7 +563,7 @@ full_icon_name		= npc_icon_svoboda_light_outfit
 
 cost				=10000
 slot				= 6
-full_scale_icon		= 10,11			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 10,11			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_svoboda_light_outfit_immunities
 
@@ -583,7 +582,7 @@ power_loss = 0.77
 bones_koeff_protection = gilet_mask_damage
 
 [sect_svoboda_light_outfit_immunities]
-burn_immunity				=0.04	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.04	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.04
 wound_immunity				=0.020
@@ -597,7 +596,7 @@ fire_wound_immunity			=0.012
 
 
 ;---------------------------------------------------------------------------------------------
-;		ТЯЖЕЛЫЙ КОСТЮМ СВОБОДЫ
+;		Г’ГџГ†Г…Г‹Г›Г‰ ГЉГЋГ‘Г’ГћГЊ Г‘Г‚ГЋГЃГЋГ„Г›
 ;---------------------------------------------------------------------------------------------
 [svoboda_heavy_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -624,7 +623,7 @@ nightvision_sect	= effector_nightvision_bad
 
 cost				=12500
 slot				= 6
-full_scale_icon		= 2,6			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 2,6			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_svoboda_heavy_outfit_immunities
 
@@ -642,7 +641,7 @@ fire_wound_protection  			=0.4
 bones_koeff_protection = kombez_antigas_damage
 
 [sect_svoboda_heavy_outfit_immunities]
-burn_immunity				=0.03	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.03	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.03
 wound_immunity				=0.015
@@ -655,7 +654,7 @@ fire_wound_immunity			=0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		ОБЫЧНЫЙ КОСТЮМ ДОЛГА
+;		ГЋГЃГ›Г—ГЌГ›Г‰ ГЉГЋГ‘Г’ГћГЊ Г„ГЋГ‹ГѓГЂ
 ;---------------------------------------------------------------------------------------------
 [dolg_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -681,7 +680,7 @@ full_icon_name		= npc_icon_dolg_outfit
 
 cost				=14000
 slot				= 6
-full_scale_icon		= 8,11			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 8,11			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 nightvision_sect	= effector_nightvision_bad
 
 immunities_sect			= sect_dolg_outfit_immunities
@@ -700,7 +699,7 @@ fire_wound_protection  			=0.4
 bones_koeff_protection = kombez_antigas_damage
 
 [sect_dolg_outfit_immunities]
-burn_immunity				=0.03	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.03	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.03
 wound_immunity				=0.015
@@ -714,7 +713,7 @@ fire_wound_immunity			=0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		НАУЧНЫЙ КОСТЮМ ДОЛГА
+;		ГЌГЂГ“Г—ГЌГ›Г‰ ГЉГЋГ‘Г’ГћГЊ Г„ГЋГ‹ГѓГЂ
 ;---------------------------------------------------------------------------------------------
 [dolg_scientific_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -741,7 +740,7 @@ full_icon_name		= npc_icon_dolg_scientific_outfit
 nightvision_sect	= effector_nightvision_good
 
 cost				=25000
-full_scale_icon		= 8,6		;иконка сталкера в костюме в полный рост
+full_scale_icon		= 8,6		;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_dolg_scientific_outfit_immunities
 
@@ -759,7 +758,7 @@ fire_wound_protection  			=0.40
 bones_koeff_protection = kombez_kupol_damage
 
 [sect_dolg_scientific_outfit_immunities]
-burn_immunity				=0.03	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.03	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.03
 wound_immunity				=0.015
@@ -773,7 +772,7 @@ fire_wound_immunity			=0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		ОБЫЧНЫЙ КОСТЮМ УЧЕННОГО
+;		ГЋГЃГ›Г—ГЌГ›Г‰ ГЉГЋГ‘Г’ГћГЊ Г“Г—Г…ГЌГЌГЋГѓГЋ
 ;---------------------------------------------------------------------------------------------
 [ecolog_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -800,7 +799,7 @@ full_icon_name		= npc_icon_ecolog_outfit
 nightvision_sect	= effector_nightvision_good
 
 cost				=15000
-full_scale_icon		= 14,6			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 14,6			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_ecolog_outfit_immunities
 
@@ -819,7 +818,7 @@ fire_wound_protection  			=0.20
 bones_koeff_protection = kurtka_kupol_damage
 
 [sect_ecolog_outfit_immunities]
-burn_immunity				=0.005	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.005	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.005
 wound_immunity				=0.025
@@ -833,7 +832,7 @@ fire_wound_immunity			=0.015
 
 
 ;---------------------------------------------------------------------------------------------
-;		УКРЕПЛЕННЫЙ КОСТЮМ УЧЕННОГО
+;		Г“ГЉГђГ…ГЏГ‹Г…ГЌГЌГ›Г‰ ГЉГЋГ‘Г’ГћГЊ Г“Г—Г…ГЌГЌГЋГѓГЋ
 ;---------------------------------------------------------------------------------------------
 [protection_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -860,7 +859,7 @@ full_icon_name		= npc_icon_protection_outfit
 nightvision_sect	= effector_nightvision_good
 
 cost				=24000
-full_scale_icon		= 12,6			;иконка сталкера в костюме в полный рост
+full_scale_icon		= 12,6			;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_protection_outfit_immunities
 
@@ -879,7 +878,7 @@ bones_koeff_protection = kombez_kupol_damage
 
 
 [sect_protection_outfit_immunities]
-burn_immunity				=0.005	;коэффициенты иммунитета самого костюма
+burn_immunity				=0.005	;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				=0.01
 shock_immunity				=0.005
 wound_immunity				=0.015
@@ -898,7 +897,7 @@ fire_wound_immunity			=0.01
 
 
 ;---------------------------------------------------------------------------------------------
-;		УСТАРЕВШИЕ КОСТЮМЫ! НЕ ЮЗАТЬ
+;		Г“Г‘Г’ГЂГђГ…Г‚ГГ€Г… ГЉГЋГ‘Г’ГћГЊГ›! ГЌГ… ГћГ‡ГЂГ’Гњ
 ;---------------------------------------------------------------------------------------------
 [military_stalker_outfit]:outfit_base
 GroupControlSection	= spawn_group
@@ -922,7 +921,7 @@ inv_grid_height		= 3
 inv_grid_x			= 18
 inv_grid_y			= 17
 cost				= 0
-full_scale_icon		= 10,6		;иконка сталкера в костюме в полный рост
+full_scale_icon		= 10,6		;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_military_stalker_outfit_immunities
 
@@ -940,7 +939,7 @@ fire_wound_protection  		= 1.0
 bones_koeff_protection = kurtka_mask_damage
 
 [sect_military_stalker_outfit_immunities]
-burn_immunity				= 1.00				;коэффициенты иммунитета самого костюма
+burn_immunity				= 1.00				;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				= 1.00
 shock_immunity				= 1.00
 wound_immunity				= 1.00
@@ -974,7 +973,7 @@ inv_grid_height		= 3
 inv_grid_x			= 18
 inv_grid_y			= 17
 cost				= 12000
-full_scale_icon		= 10,6		;иконка сталкера в костюме в полный рост
+full_scale_icon		= 10,6		;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_military_commander_outfit_immunities
 
@@ -992,7 +991,7 @@ fire_wound_protection  		= 1.0
 bones_koeff_protection =	kurtka_mask_damage
 
 [sect_military_commander_outfit_immunities]
-burn_immunity				= 1.00				;коэффициенты иммунитета самого костюма
+burn_immunity				= 1.00				;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				= 1.00
 shock_immunity				= 1.00
 wound_immunity				= 1.00
@@ -1026,7 +1025,7 @@ inv_grid_x			= 0
 inv_grid_y			= 18
 cost				= 5000
 slot				= 6
-full_scale_icon		= 6,6		;иконка сталкера в костюме в полный рост
+full_scale_icon		= 6,6		;ГЁГЄГ®Г­ГЄГ  Г±ГІГ Г«ГЄГҐГ°Г  Гў ГЄГ®Г±ГІГѕГ¬ГҐ Гў ГЇГ®Г«Г­Г»Г© Г°Г®Г±ГІ
 
 immunities_sect			= sect_soldier_outfit_immunities
 
@@ -1044,7 +1043,7 @@ fire_wound_protection  			= 0.0
 bones_koeff_protection = gilet_mask_damage
 
 [sect_soldier_outfit_immunities]
-burn_immunity				= 0.00				;коэффициенты иммунитета самого костюма
+burn_immunity				= 0.00				;ГЄГ®ГЅГґГґГЁГ¶ГЁГҐГ­ГІГ» ГЁГ¬Г¬ГіГ­ГЁГІГҐГІГ  Г±Г Г¬Г®ГЈГ® ГЄГ®Г±ГІГѕГ¬Г 
 strike_immunity				= 0.00
 shock_immunity				= 0.00
 wound_immunity				= 0.00
