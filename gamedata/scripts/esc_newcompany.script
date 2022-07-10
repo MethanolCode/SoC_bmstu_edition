@@ -1,0 +1,7 @@
+function aspirant()
+alife():create("esc_aspirant",vector():set(-240.99, -20.19, -159.58),14952,47)
+end
+
+function mk_first()
+alife():create("esc_mk_first",vector():set(-240.99, -20.19, -159.58),14952,47)
+end
