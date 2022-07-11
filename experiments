@@ -1,3 +1,7 @@
+gamedata->scripts->new
+gamedata->scripts->xr_motivation->stroka:
+function motivator_binder:death_callback(victle, who)
+---------------------------------------------------
 local level_name = {
   ["l01_escape"] = "Кордон",
   ["l02_garbage"] = "Свалка",
