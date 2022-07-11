@@ -1,0 +1,38 @@
+local level_name = {
+  ["l01_escape"] = "Кордон",
+  ["l02_garbage"] = "Свалка",
+  ["l03_agroprom"] = "НИИ Агропром",
+  ["l03u_agr_undergroun"] = "Подземелье НИИ Агропром",
+  ["l04_darkvalley"] = "Тёмная долина",
+  ["l04u_labx18"] = "Лаборатория X-18",
+  ["l05_bar"] = "Бар",
+  ["l06_rostok"] = "Дикая территория",
+  ["l07_military"] = "Арм.склады",
+  ["l08_yantar"] = "Янтарь",
+  ["l08u_brainlab"] = "Лаборатория X-16",
+  ["l10u_bunker"] = "Лаборатория X-10",
+  ["l10_radar"] = "Радар",
+  ["l11_pripyat"] = "Припять",
+  ["l12_stancia"] = "ЧАЭС",
+  ["l12_stancia_2"] = "ЧАЭС",
+  ["l12u_sarcofag"] = "Саркофаг",
+  ["l12u_control_monolith"] = "Управление Монолитом"
+            }
+local community = {
+["stalker"] = "Сталкер",
+["monolith"] = "Монолит",
+["military"] = "Военные",
+["bandit"] = "Бандит",
+["killer"] = "Наемник",
+["ecolog"] = "Эколог",
+["dolg"] = "Долг",
+["freedom"] = "Свобода",
+["zombied"] = "Зомбированный",
+["trader"] = "Торговец"
+        }
+function kill_npc(victim, who)
+  if victim and IsStalker(victim) then
+local dead_news = "\\n%c[255,160,160,160]Группировка: %c[default]"..community[victim:character_community()].."\\n%c[255,160,160,160]Имя: %c[default]"..victim:character_name().."\\n%c[255,160,160,160]Локация: %c[default]"..level_name[level.name()]..""
+db.actor:give_game_news(dead_news, "ui\\ui_icons_npc", Frect():set(2,130,124,124), 1, 4000)
+   end
+end
