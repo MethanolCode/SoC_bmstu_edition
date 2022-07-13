@@ -1,0 +1,5 @@
+function dead_sms_sound_1()
+	local snd_obj
+	snd_obj = xr_sound.get_safe_sound_object([[device\pda\pda_tip]]) -- путь до звукового файла
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 1, vector(), 1.0)
+end
