@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <game_dialogs>
+<!--BMSTU-->
 	<dialog id="esc_aspirant_first_meeting">
         <phrase_list>
 		<dont_has_info>esc_aspirant_first_meeting_1</dont_has_info>
@@ -21,11 +22,47 @@
             </phrase>			
 			<phrase id="4">
                 <text>esc_aspirant_first_meeting_4</text>
+				<next>5</next>
             </phrase>
 			<phrase id="5">
-                <text>esc_aspirant_first_meeting_5</text>
-				<give_info>esc_aspirant_first_meeting_1</give_info>
+                <text>esc_aspirant_first_meeting_6</text>
+				<give_info>esc_aspirant_first_meeting_x</give_info>
             </phrase>
+        </phrase_list>
+    </dialog>
+	
+	<dialog id="esc_aspirant_second_meeting">
+        <phrase_list>
+		<dont_has_info>esc_aspirant__meeting_1</dont_has_info>
+            <phrase id="0">
+                <text>esc_aspirant_second_meeting_0</text>
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+                <text>esc_aspirant_second_meeting_1</text>
+                <next>2</next>
+            </phrase>
+			<phrase id="2">
+                <text>esc_aspirant_second_meeting_2</text>
+                <next>3</next>
+            </phrase>
+			<phrase id="3">
+                <text>esc_aspirant_second_meeting_3</text>
+				<next>4</next>
+            </phrase>			
+			<phrase id="4">
+                <text>esc_aspirant_second_meeting_4</text>
+				<next>5</next>
+            </phrase>
+			<phrase id="5">
+                <text>esc_aspirant_second_meeting_5</text>
+				<next>6</next>
+            </phrase>
+			<phrase id="6">
+                <text>esc_aspirant_second_meeting_6</text>
+				<give_info>esc_aspirant_second_meeting_x</give_info>
+            </phrase>
+			
         </phrase_list>
     </dialog>
 
