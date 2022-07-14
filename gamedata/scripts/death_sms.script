@@ -31,9 +31,14 @@ local community = {
 ["trader"] = "Торговец"
         }
 function kill_npc(victim, who)
-  if victim and IsStalker(victim) then
-local dead_news = "\\n%c[255,160,160,160]Group: %c[default]"..community[victim:character_community()].."\\n%c[255,160,160,160]Name: %c[default]"..victim:character_name().."\\n%c[255,160,160,160]Loxation: %c[default]"..level_name[level.name()]..""
-db.actor:give_game_news(dead_news, "ui\\ui_icons_npc", Frect():set(2,130,124,124), 1, 4000)
-dead_sms_sound.dead_sms_sound_1()
-   end
+	if victim and IsStalker(victim) then
+		local lvl = level_name[level.name()]
+		local com = community[victim:character_community()]
+		db.actor:give_game_news("\\n%c[255,255,0,0]Группировка: %c[default]"..com.."\\n%c[255,255,0,0]Имя/кличка: %c[default]"..victim:character_name().."\\n%c[255,255,0,0]Локация: %c[default]"..lvl, 
+		"ui\\ui_icons_npc", 
+		Frect():set(2,130,124,124), 
+		math.random(3000, 5000), 
+		6000)
+		dead_sms_sound.dead_sms_sound_1()
+	end
 end
