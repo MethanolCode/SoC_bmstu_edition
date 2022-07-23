@@ -26,6 +26,7 @@
             </phrase>
 			<phrase id="5">
                 <text>esc_aspirant_first_meeting_6</text>
+				<action>special_items_drop.give_meshok</action>
 				<give_info>esc_aspirant_first_meeting_x</give_info>
             </phrase>
         </phrase_list>
