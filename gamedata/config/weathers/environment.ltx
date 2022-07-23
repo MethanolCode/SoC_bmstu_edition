@@ -15,6 +15,13 @@
 #include "weather_stancia.ltx"
 #include "weather_indoor.ltx"
 
+#include "weather_ini.ltx"
+#include "weather_vivid.ltx"
+#include "weather_vivid_cloudy.ltx"
+#include "weather_vivid_stormy.ltx"
+#include "weather_vivid_pure.ltx"
+#include "weather_vivid_foggy.ltx"
+
 [weathers]
 map				= sect_map
 test			= sect_test
@@ -30,6 +37,12 @@ stancia2        = sect_stancia2
 yantar          = sect_yantar
 yantar_indoor   = sect_yantar_indoor
 
+restore_sun   = sect_weather_ini
+vivid   = sect_vivid_weather
+vivid_cloudy   = sect_vivid_cloudy_weather
+vivid_stormy   = sect_vivid_stormy_weather
+vivid_pure   = sect_vivid_pure_weather
+vivid_foggy   = sect_vivid_foggy_weather
 
 [weather_effects]
 surge_day		= sect_surge_day
