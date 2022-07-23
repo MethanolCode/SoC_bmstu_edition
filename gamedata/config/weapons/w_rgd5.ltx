@@ -34,9 +34,9 @@ force_const				= 25;20
 force_max				= 30
 force_grow_speed		= 15;2 ;30
 
-destroy_time		= 2500;3500
+destroy_time		= 3000;3500
 
-cost				= 100	;40
+cost				= 1500	;40
 
 ;-----------------------------------------------------------------------------------
 blast				= 1.50
@@ -45,10 +45,10 @@ blast_impulse		= 250
 ;delete
 blast_impulse_factor = 1
 
-frags				= 12
-frags_r				= 15
-frag_hit			= 1.5
-frag_hit_impulse	= 240
+frags				= 110
+frags_r				= 55
+frag_hit			= 1.0
+frag_hit_impulse	= 250
 
 hit_type_blast		= explosion
 hit_type_frag		= fire_wound
@@ -69,8 +69,8 @@ fragment_speed				= 200
 explode_duration		 = 5		;подолжительность взрыва (с)
 
 ;звуки
-snd_explode = weapons\t_rgd5_explosion     ;rgd5_explode
-snd_checkout = weapons\generic_checkout
+snd_explode = weapons\t_rgd5_explosion
+snd_checkout = weapons\generic_checkout, 1, 0.25
 
 attach_position_offset	= -0.053,-0.089,0.0
 attach_angle_offset		= 0,0,0
@@ -87,21 +87,20 @@ wm_size                  = 0.1
 wallmark_section		 = explosion_marks
 
 [grenade_rgd5_hud]
-fire_point          = 0.05, 0.0, 0.1
-fire_bone           = grenade_0
-orientation         = 0,0,0
-position            = 0,0,0
+fire_point			= 0,0,0
+fire_bone			= wpn_body
+position			= -0.061000,-0.160000,0.002500
+orientation			= -0.500000,1.000000,-2.000000
 visual              = weapons\grenade\wpn_rgd_5_hud.ogf
 
-throw_point				 = 0.0,0.4,0.3
-;throw_point			= -0.05,-0.10,0.05
-throw_dir			= 0,0,1
+throw_point						= 0.0,0.4,0.3
+throw_dir						= 0,0,1
 
 anim_show			= draw
-anim_hide			= holster_0
-anim_idle			= idle_0
-anim_playing		= idle_01
-anim_throw_begin	= attack_0_begin
-anim_throw_idle		= attack_0_idle
-anim_throw_act		= attack_0_act	
-anim_throw_end		= attack_0_end
+anim_hide			= holster
+anim_idle			= idle
+anim_playing		= idle_sae
+anim_throw_begin	= throw_begin
+anim_throw_idle		= throw_idle
+anim_throw_act		= throw_act	
+anim_throw_end		= throw_end
