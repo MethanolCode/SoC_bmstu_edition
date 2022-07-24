@@ -20,6 +20,8 @@ af_electra_sparkler = zone_witches_galantine, 2, 30.0
 af_electra_flash = zone_witches_galantine, 3, 50.0
 af_electra_moonlight = zone_witches_galantine, 5, 100.0
 mp_af_electra_flash = zone_witches_galantine, 3, 50.0
+af_fireball = zone_zharka_static, 3, 30.0
+
 
 [af_activation_gravi]
 ;----------------------------------------------------------------------------------------------------------------------------------------
@@ -63,6 +65,7 @@ hud							= artefact_hud
 animation_slot				= 11
 allow_inertion				= true
 ;slot						= 10
+slot						= 1
 attach_angle_offset			= 0,0,0
 attach_position_offset		= -0.1,-0.1,0
 attach_bone_name			= bip01_root
@@ -463,6 +466,7 @@ lights_enabled = true	;true			;???? ??????
 trail_light_color = 0.9,0.5,0.5
 trail_light_range = 3.0
 
+artefact_activation_seq = af_activation_gravi
 
 ;скорости увеличения (уменьшения) 
 health_restore_speed =0.001			
