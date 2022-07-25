@@ -6,6 +6,9 @@
 	<!-- Aspirant -->
 	<info_portion id="esc_aspirant_first_meeting_x"></info_portion>
 	<info_portion id="esc_aspirant_second_meeting_x"></info_portion>
+	<info_portion id="esc_aspirant_leshiy_history_one_x">
+		<article>story_of_university_1</article>
+	</info_portion>
 	<!-- Tutorial artefact -->
 	<info_portion id="tutorial_artefact_start">
 	<!-- 	<task>esc_flash_task</task>
@@ -244,7 +247,6 @@
 	<!-- труп у аномалии -->
 	<info_portion id="esc_tutorial_dead_novice">
 		<article>tutorial_moving_anomaly</article>
-		<article>story_of_university_1</article>
 		<article>mutant_flesh_general</article>
 	</info_portion>
 	

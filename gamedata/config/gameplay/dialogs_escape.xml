@@ -2,8 +2,8 @@
 <game_dialogs>
 <!--BMSTU-->
 	<dialog id="esc_aspirant_first_meeting">
-        <phrase_list>
-		<dont_has_info>esc_aspirant_first_meeting_1</dont_has_info>
+    <dont_has_info>esc_aspirant_first_meeting_x</dont_has_info>    
+		<phrase_list>
             <phrase id="0">
                 <text>esc_aspirant_first_meeting_0</text>
                 <next>1</next>
@@ -33,8 +33,8 @@
     </dialog>
 	
 	<dialog id="esc_aspirant_second_meeting">
-        <phrase_list>
-		<dont_has_info>esc_aspirant__meeting_1</dont_has_info>
+    <dont_has_info>esc_aspirant_second_meeting_x</dont_has_info>    
+		<phrase_list>
             <phrase id="0">
                 <text>esc_aspirant_second_meeting_0</text>
                 <next>1</next>
@@ -63,10 +63,43 @@
                 <text>esc_aspirant_second_meeting_6</text>
 				<give_info>esc_aspirant_second_meeting_x</give_info>
             </phrase>
-			
         </phrase_list>
     </dialog>
-
+	
+	<dialog id="esc_aspirant_leshiy_history_one">
+    <dont_has_info>esc_aspirant_leshiy_history_one_x</dont_has_info>    
+		<phrase_list>
+            <phrase id="0">
+                <text>esc_aspirant_leshiy_history_one_0</text>
+                <next>1</next>
+            </phrase>
+			<phrase id="1">
+                <text>esc_aspirant_leshiy_history_one_1</text>
+                <next>2</next>
+            </phrase>
+			<phrase id="2">
+                <text>esc_aspirant_leshiy_history_one_2</text>
+                <next>3</next>
+            </phrase>
+			<phrase id="3">
+                <text>esc_aspirant_leshiy_history_one_3</text>
+				<next>4</next>
+            </phrase>			
+			<phrase id="4">
+                <text>esc_aspirant_leshiy_history_one_4</text>
+				<next>5</next>
+            </phrase>
+			<phrase id="5">
+                <text>esc_aspirant_leshiy_history_one_5</text>
+				<next>6</next>
+            </phrase>
+			<phrase id="6">
+                <text>esc_aspirant_leshiy_history_one_6</text>
+				<give_info>esc_aspirant_leshiy_history_one_x</give_info>
+            </phrase>
+        </phrase_list>
+    </dialog>
+	
 <!--BMSTU-->
 
     <dialog id="tutorial_wounded_give_medkit">

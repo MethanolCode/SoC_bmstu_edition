@@ -111,8 +111,8 @@ light_var_color		 		= 0.05
 light_var_range		 		= 0.5
 light_time 		 			= 0.2
 
-snd_draw					= weapons\generic_draw
-snd_holster					= weapons\generic_holster
+snd_draw					= weapons\bino_draw
+snd_holster					= weapons\bino_holster
 snd_gyro					= weapons\binoculars_gyro
 snd_zoomin					= weapons\binoculars_zoomin
 snd_zoomout					= weapons\binoculars_zoomout
@@ -132,22 +132,22 @@ found_snd					= detectors\DA-2_beep1
 [wpn_binoc_hud]
 shell_point					= 0.0, 0.0, 0.0
 fire_point              	= 0.05, 0.0, 0.1
-fire_bone               	= binoculars
-orientation             	= 10, 0, -2
-position                	= 0.18, 0, 0
-;position                	= 0.15, -0.14, 0.25
+fire_bone               	= wpn_body
+position					= -0.0085,-0.2,0.2
+orientation					= 5.85,5.45,-0.95
 visual                  	= weapons\binoculars\wpn_binoculars_hud.ogf
 
-zoom_offset					= -0.238600,0.153600,0.000000
-zoom_rotate_x				= -0.014000
-zoom_rotate_y				= 0.324000
+zoom_offset					= 0.0,0.022,-0.05
+zoom_rotate_x				= 0
+zoom_rotate_y				= 0
 
 anim_idle					= idle
 anim_reload					= idle
 anim_draw					= draw
 anim_holster				= holster
-anim_shoot					= idle
-anim_idle_aim				= idle
+anim_shoot					= aim
+anim_idle_aim				= aim
+anim_idle_sprint			= sprint
 
 
 

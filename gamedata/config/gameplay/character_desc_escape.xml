@@ -128,6 +128,7 @@
 		<start_dialog>hello_dialog</start_dialog>
 		<actor_dialog>esc_aspirant_first_meeting</actor_dialog>
 		<actor_dialog>esc_aspirant_second_meeting</actor_dialog>
+		<actor_dialog>esc_aspirant_leshiy_history_one</actor_dialog>
 	</specific_character>
 
 <!---------------------------------------МК1----------------------------------------------------->	

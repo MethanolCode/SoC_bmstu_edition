@@ -175,3 +175,54 @@ anim_throw_begin	= attack_0_begin
 anim_throw_idle		= attack_0_idle
 anim_throw_act		= attack_0_act	
 anim_throw_end		= attack_0_end
+
+[el_grenade_normal]:grenade_gd-05 ;Ёлектрошокова€ граната
+inv_name = el_grenade_normal_name ;Ќазвание новой гранаты
+inv_name_short = el_grenade_normal_name ;Ќазвание новой гранаты
+description = el_grenade_normal_desc ;ќписание новой гранаты
+blast = 3 ;хит от гранаты (300%)
+blast_r = 6.5 ;радиус хита (5 м.)
+hit_type_blast = shock ;тип хита
+frags					= 30
+frags_r					= 7.5
+frag_hit				= 2.5
+frag_hit_impulse		= 0
+hit_type_frag			= shock
+destroy_time = 2000
+cost = 12000
+snd_explode = anomaly\electra_blast1 ;звук взрыва
+explode_particles = anomaly2\electra2_blast ;или anomaly2\electra2_blast_00 ;партикл взрыва
+
+[el_grenade_strong]:grenade_gd-05
+inv_name = el_grenade_strong_name
+inv_name_short = el_grenade_strong_name
+description = el_grenade_strong_desc
+blast = 3.5
+blast_r = 7.5
+hit_type_blast = shock
+frags					= 35
+frags_r					= 8.5
+frag_hit				= 2.8
+frag_hit_impulse		= 0
+hit_type_frag			= shock
+destroy_time = 2200
+cost = 15600
+snd_explode = anomaly\electra_blast1
+explode_particles = anomaly2\electra2_blast_00
+
+[gravi_grenade]:grenade_gd-05 ; гравитационна€ граната
+inv_name = gravi_grenade_name
+inv_name_short = gravi_grenade_name
+description = gravi_grenade_desc
+blast = 7
+blast_r = 11
+hit_type_blast = strike
+frags					= 0
+frags_r					= 0
+frag_hit				= 0
+frag_hit_impulse		= 0
+hit_type_frag			= strike
+destroy_time = 2200
+cost = 19000
+snd_explode = anomaly\gravi_blowout6
+explode_particles = anomaly2\gravity_blast_final00

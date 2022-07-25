@@ -25,15 +25,15 @@ holder_range_modifier	= 2.0               ; во сколько раз увеличивается eye_ran
 holder_fov_modifier		= 0.3              ; во сколько раз увеличивается eye_fov
 ;-----------------------------------------------------------------------------------
 
-cost					 	=10000
+cost					 	= 10000
 weapon_class			 	= heavy_weapon
 
 ammo_limit		 			= 120
 ammo_current		 		= 96
 ammo_elapsed		 		= 12
 
-ammo_mag_size		 		=1
-ammo_class		 			=ammo_og-7b
+ammo_mag_size		 		= 1
+ammo_class		 			= ammo_og-7b
 
 hand_dependence		 		= 1
 single_handed				= 0
@@ -45,12 +45,12 @@ launch_speed				= 5
 
 inv_name					= wpn-rpg7
 inv_name_short				= wpn-rpg7
-inv_weight					=6.3
+inv_weight					= 6.3
 
-inv_grid_width				= 5
-inv_grid_height				= 1
-inv_grid_x					= 6
-inv_grid_y					= 0
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 5
+inv_grid_y         = 36
 
 kill_msg_x			= 0
 kill_msg_y			= 85
@@ -59,7 +59,7 @@ kill_msg_height		= 19
 
 ;-----------------------------------------------------------------------------------
 ;базовая дисперсия
-fire_dispersion_base		=1.5	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base		= 1.5   ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
 
 ;отдача
 cam_relax_speed         	= 2.0	;скорость возврата в исходное положение
@@ -68,14 +68,14 @@ cam_max_angle				= 8		;максимальный угол отдачи
 cam_max_angle_horz			= 5.0	;(degree) maximum shot horizontal degree 
 cam_step_angle_horz			= 0.5	;(degree) size of step camera moved in horizontal position while shooting
 
-fire_dispersion_condition_factor =5	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		=0.0001	;вероятность осечки при максимальном износе 
-condition_shot_dec 			=0.00003	;увеличение износа при каждом выстреле
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.0001	;вероятность осечки при максимальном износе 
+condition_shot_dec 			= 0.00003	;увеличение износа при каждом выстреле
 ;-----------------------------------------------------------------------------------
 
 direction                	= 0, 0, 1
-shell_point				 	= 0.0, 0.0, 0.0
-fire_point               	= 0.0, 0.162, 0.35
+shell_point							= 0.0, 0.0, 0.0
+fire_point							= 0.0, 0.162, 0.35
 
 smoke_particles		   		= weapons\generic_weapon02;generic_rpg_shot
 
@@ -83,13 +83,13 @@ rpm_empty_click 	 		= 200
 
 ; ttc
 ;---------------------------------------------------------------
-hit_power       			=3.00
-hit_impulse					=450
+hit_power       			= 3.00
+hit_impulse					= 450
 hit_type 					= explosion
 
-fire_distance            	=400
-bullet_speed			 	=100	;300			;начальная скорость пули
-rpm                      	=200
+fire_distance            	= 400
+bullet_speed			 	= 100 ;300			;начальная скорость пули
+rpm                      	= 200
 
 
 ;---------------------------------------------------------------
@@ -97,8 +97,8 @@ rpm                      	=200
 
 hud                      	= wpn_rpg7_hud
 normal                   	= 0, 1, 0
-position                 	= -0.027, -0.113, 0.0
-orientation              	= 0, 0, 0
+position							= -0.027, -0.113, 0.0
+orientation							= 0, 0, 0
 
 ;--STRAP PARAMETERS-----------------------------------------------------------------
 ;под мишкой стволом в верх
@@ -125,22 +125,25 @@ ph_mass			 			= 1
 ;cost			 			= 350
 
 ;addons
-scope_status				=1
-silencer_status				=0
-grenade_launcher_status		=0
+scope_status				= 0
+silencer_status				= 0
+grenade_launcher_status		= 0
 
-scope_texture				= wpn\wpn_crosshair_rpg
-
-zoom_enabled				=true
-scope_zoom_factor			=30	;ПСО-1 2X
+zoom_enabled				= true
+scope_zoom_factor			= 55
 
 ;звуки
-snd_draw					= weapons\generic_draw
-snd_holster					= weapons\generic_holster
-snd_shoot					= weapons\t_rpg7_explosion      ;rpg7_shoot
-snd_empty					= weapons\generic_empty
-snd_reload					= weapons\rpg7_reload, 1.0, 0.8
-snd_explode					= weapons\rpg7_explode; t_rpg7_explosion
+snd_draw				= weapons\rpg7\rpg7_draw
+snd_holster				= weapons\generic_holster
+snd_silncer_shot		= weapons\draw_silent
+snd_shoot				= weapons\rpg7\rpg7_shoot
+snd_empty				= weapons\rpg7\rpg7_empty
+snd_reload				= weapons\rpg7\rpg7_reload
+snd_explode 			= weapons\rpg7\rpg7_explode
+snd_shoot_grenade		= weapons\draw_silent
+snd_reload_grenade		= weapons\draw_silent
+snd_switch				= weapons\draw_silent
+snd_bore				= weapons\draw_silent
 
 grenade_bone				= grenade
 
@@ -153,29 +156,16 @@ wallmark_section			= explosion_marks
 auto_spawn_ammo	= false
 
 ;запрещение режима Sprint для Актера
-sprint_allowed			= false
-silencer_name=
-scope_name=
-grenade_launcher_name=
-silencer_hit_power=
-silencer_hit_impulse=
-silencer_fire_distance=
-silencer_bullet_speed=
-scope_x=
-scope_y=
-silencer_x=
-silencer_y=
-grenade_launcher_x=
-grenade_launcher_y=
+sprint_allowed			= true
 
  
 [wpn_rpg7_hud]
 shell_point		 			= 0.0, 0.0, 0.0
 fire_point               	= 0.00, 0.00, 0
-fire_bone                	= grenade_0
-grenade_bone			 	= grenade_0
-orientation              	= 0,0,0
-position                 	= 0,0,0
+fire_bone                	= muzzle
+grenade_bone			 	= muzzle
+position					= 0.020500,-0.165999,0.209500
+orientation					= 3.649998,1.050001,-0.050000
 visual                   	= weapons\rpg_7\wpn_rpg_7_hud.ogf
 
 anim_idle					= idle
@@ -183,12 +173,13 @@ anim_reload					= reload
 anim_draw					= draw
 anim_holster				= holster
 anim_shoot					= shoot
-anim_idle_aim				= idle
+anim_idle_aim				= aim
+anim_idle_sprint			= sprint
 
 ;смещения HUD для режима приближения
-zoom_offset					= -0.046700,-0.022000,0.000000
-zoom_rotate_x				= 0.020000
-zoom_rotate_y				= 0.031400
+zoom_offset					= -0.184,-0.0435,-0.01
+zoom_rotate_x				= -0.0155
+zoom_rotate_y				= 0.064
 
 [wpn_rpg7_missile]:identity_immunities
 GroupControlSection			= spawn_group
@@ -245,7 +236,7 @@ explode_duration		 	= 5		;подолжительность взрыва (с)
 
 
 ;звуки
-snd_explode 				= weapons\rpg7_explode
+snd_explode 				= weapons\rpg7\rpg7_explode
 snd_fly_sound				= weapons\rocket_fly
 
 ;свойства которые читаются, но не используются (надо убрать)

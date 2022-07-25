@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="windows-1251" ?>
 <string_table>
 	<!--BMSTU-->
+	
 	<string id="esc_aspirant_first_meeting_0">
 		<text>Доброе утро, вьетнам!</text>
 	</string>
@@ -19,9 +20,11 @@
 	<string id="esc_aspirant_first_meeting_5">
 		<text>Подробности кину на твой КПК, ибо времени особо нет. Удачи тебе, студент!</text>
 	</string>
+	
 	<!--BMSTU-->
+	
 	<string id="esc_aspirant_second_meeting_0">
-		<text>Привет, задание выполнено.</text>
+		<text>Снова здрасте, задание выполнено.</text>
 	</string>
 	<string id="esc_aspirant_second_meeting_1">
 		<text>Молодец, вот награда, а теперь второй этап...</text>
@@ -41,6 +44,31 @@
 	<string id="esc_aspirant_second_meeting_6">
 		<text>Понял, попробую их поднапрячь. Счастливо!</text>
 	</string>
+	
+	<!--BMSTU-->
+	
+	<string id="esc_aspirant_leshiy_history_one_0">
+		<text>Слушай, а не знаешь что со мной произошло? И как я вообще тут оказался?</text>
+	</string>
+	<string id="esc_aspirant_leshiy_history_one_1">
+		<text>Мдаа, крепко тебя накрыло. Мы с тобой считай коллеги, в одной лабе работали до катастрофе. Только ты практику закрывал, а я значился старшим лаборантом.</text>
+	</string>
+	<string id="esc_aspirant_leshiy_history_one_2">
+		<text>Так, а вот отсюда поподробнее.</text>
+	</string>
+	<string id="esc_aspirant_leshiy_history_one_3">
+		<text>Могу тебе целый отчет накидать, даже русским литературным. А сейчас надо организовывать новый лагерь, с чем, кстати, ты мне должен помочь.</text>
+	</string>
+	<string id="esc_aspirant_leshiy_history_one_4">
+		<text>За отчет спасибо, а вот почему я опять должен помогать? Хочется свободы.</text>
+	</string>	
+	<string id="esc_aspirant_leshiy_history_one_5">
+		<text>Ну, у меня есть еще один файлик с ценной информацией. За него торгаш готов горы свернуть, так что пригодится. Да и местным отморозкам жить станет трудней, как ни крути - везде плюсы!</text>
+	</string>
+	<string id="esc_aspirant_leshiy_history_one_6">
+		<text>Эх, манишь, чорт. Ладно, помогу с лагерем. Дело это социально полезное и благородное.</text>
+	</string>
+	
 	<!--BMSTU-->
 	<string id="esc_bridge_soldiers_start_11">
 		<text>Здесь проход воспрещён, сталкер.</text>
