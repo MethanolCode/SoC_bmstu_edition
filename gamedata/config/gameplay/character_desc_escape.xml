@@ -34,7 +34,7 @@
 		<bio>esc_wolf_bio</bio>
 
 		<class>esc_wolf</class>
-		<community>dolg</community> <terrain_sect>stalker_military_terrain</terrain_sect>
+		<community>dolg</community> <terrain_sect>stalker_terrain</terrain_sect>
 		
 		<rank>20</rank>
 		<reputation>5</reputation>
