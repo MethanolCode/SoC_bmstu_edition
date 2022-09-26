@@ -75,6 +75,7 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.article_info, nil)
 	self.object:set_callback(callback.on_item_take, nil)
 	self.object:set_callback(callback.on_item_drop, nil)
+	self.object:set_callback(callback.use_object, nil)
 	--self.object:set_callback(callback.actor_sleep, nil)
 	self.object:set_callback(callback.task_state, nil)
 	self.object:set_callback(callback.level_border_enter, nil)
@@ -108,6 +109,7 @@ function actor_binder:reinit()
 	self.object:set_callback(callback.article_info, self.article_callback, self)
 	self.object:set_callback(callback.on_item_take, self.on_item_take, self)
 	self.object:set_callback(callback.on_item_drop, self.on_item_drop, self)
+	self.object:set_callback(callback.use_object, self.use_object, self)
 	self.object:set_callback(callback.trade_sell_buy_item, self.on_trade, self) -- for game stats
 	--self.object:set_callback(callback.actor_sleep, self.sleep_callback, self)
 	self.object:set_callback(callback.task_state, self.task_callback, self)
@@ -190,6 +192,11 @@ end
 function actor_binder:on_item_drop (obj)
     level_tasks.proceed(self.object)
     --game_stats.update_drop_item (obj, self.object)
+	abc_medkit.chk_medlot_object(obj)
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:use_object(obj)
+	heal_regen.start(obj)
 end
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -222,6 +229,8 @@ function actor_binder:map_location_added_callback(spot_type_str, object_id)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:update(delta)
+	abc_medkit.chk_medlot_object()
+	heal_regen.weapontimer()
 	object_binder.update(self, delta)
 
 	-- DEBUG slowdown
@@ -344,7 +353,21 @@ function actor_binder:update(delta)
 		level_tasks.add_lchanger_location()
 
 		self.bCheckStart = false		
-	end		
+	end
+	
+	--if not self.particle then
+	--	self.particle = particles_object([[weather\water]])
+	--	self.particle:play_at_pos(self.object:position())
+	--else
+		--self.particle:move_to(self.object:position():add(vector():set(0,1,0)),vector():set(0,0,0))
+	--end
+	
+	if xrs_ai then xrs_ai.actor_update(delta) end
+
+	--added by xmk
+	-- Новости
+    news_main_data.show_news_main()
+	
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:save(packet)

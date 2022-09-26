@@ -30,6 +30,13 @@ local community = {
 ["zombied"] = "Зомбированный",
 ["trader"] = "Торговец"
         }
+		
+function dead_sms_sound()
+	local snd_obj
+	snd_obj = xr_sound.get_safe_sound_object([[device\pda\pda_tip]]) -- путь до звукового файла
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 1, vector(), 1.0)
+end
+
 function kill_npc(victim, who)
 	if victim and IsStalker(victim) then
 		local lvl = level_name[level.name()]
@@ -39,6 +46,6 @@ function kill_npc(victim, who)
 		Frect():set(2,130,124,124), 
 		math.random(3000, 5000), 
 		6000)
-		dead_sms_sound.dead_sms_sound_1()
+		dead_sms_sound()
 	end
 end

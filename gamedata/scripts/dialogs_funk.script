@@ -1,0 +1,116 @@
+--ФУНКЦИИ ДЕЙСТВИЯ: в диалоге используются теги <action>script.name_function</action>
+
+
+
+function break_dialog(first_speaker, second_speaker, id)
+	first_speaker:stop_talk()
+	second_speaker:stop_talk()
+end
+
+--Сохранить игру (в text прописываем название сейва "st_save_text_name"):
+
+function st_save_name_fun(first_speaker, second_speaker) 
+	xr_effects.scenario_autosave(db.actor,nil,{"st_save_text_name"})
+end
+
+--Выдать ГГ задание:
+
+function new_qvuest_tm()           
+	task_manager.get_task_manager():give_task("new_qvuest_tm")
+end
+
+--Выдать ГГ предметы:
+
+function give_actor_different_object(first_speaker, second_speaker)
+	dialogs.relocate_item_section(second_speaker, "wpn_bm16", "in")
+	dialogs.relocate_item_section(second_speaker, "ammo_12x70_buck","in",2)
+end
+
+--Выдать ГГ деньги:
+
+function give_actor_money(first_speaker, second_speaker)
+	dialogs.relocate_money_to_actor(first_speaker, second_speaker, 3000)
+end
+
+--Забрать у ГГ вещи:
+
+function get_actor_different_object(first_speaker, second_speaker)
+	dialogs.relocate_item_section_from_actor(first_speaker, second_speaker, "name_id_object")
+end
+
+--Выдать ГГ инфопоршень:
+
+function give_actor_infoportion(first_speaker, second_speaker)
+	db.actor:give_info_portion("infoportion")
+end
+
+--Восстановить здоровье ГГ:
+
+function medic_magic_potion(first_speaker, second_speaker)
+	db.actor.health = 1
+	db.actor.power = 1
+	db.actor.radiation = -1
+	db.actor.bleeding = 1
+end
+
+--Спавн предмета:
+
+function name_function()
+	alife():create("wpn_pb",vector():set(-155.5,-0.5,11.1),153704,1127)
+end
+
+
+
+--ФУНКЦИИ ПРОВЕРКИ: в диалоге используются теги <precondition>script.name_function</precondition>
+
+--Имеет ли ГГ предмет:
+
+function actor_have_different_object(task, objective)
+	if db.actor ~= nil then
+		return db.actor:object("name_id_object") ~= nil
+	end
+	return false
+end
+
+--ГГ нездоров:
+
+function actor_is_damn_healthy(first_speaker, second_speaker)
+	return not actor_needs_bless(first_speaker, second_speaker)
+end
+
+--ГГ здоров:
+
+function actor_needs_bless(first_speaker, second_speaker)
+	if db.actor.health < 1 or
+		db.actor.radiation > 0 or
+		db.actor.bleeding > 0 then
+		return true
+	end
+	return false
+end
+
+--Период времени настал:
+
+function is_world_time(first_speaker, second_speaker)
+	if level.get_time_hours() >= 0 and level.get_time_hours() < 3 then
+		if level.get_time_hours() > 0 then
+			return true
+		elseif level.get_time_minutes() >= 45 then
+			return true
+		end
+	end
+	return false
+end
+
+--Период времени не настал:
+
+function is_not_world_time(first_speaker, second_speaker)
+	if level.get_time_hours() >= 0 and level.get_time_hours() < 3 then
+		if level.get_time_hours() > 0 then
+			return false
+		elseif level.get_time_minutes() >= 45 then
+			return false
+		end
+	end
+	return true
+end

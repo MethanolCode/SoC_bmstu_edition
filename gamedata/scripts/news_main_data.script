@@ -1,0 +1,155 @@
+--[[---------------------------------------------------------------------------------------
+
+	file: news_main_data.script
+	author: OGS Evolution - team + правки от methanol
+	ver.1.1
+	description: Вспомогательные функции для новостей
+
+---------------------------------------------------------------------------------------]]--
+
+local post_message_prob = 1 -- 1 - работает , 0 - вылет!
+
+local prob1 = news_main.show_news_trade
+local prob2 = news_main.show_news_another
+local prob3 = news_main.show_news_dolg
+local prob4 = news_main.show_news_freedom
+local prob5 = news_main.show_news_random
+
+local time = time_global()
+--Главная функция
+
+function show_news_main()
+	if (isIsolatedLevel(level.name()) == true) then return end	
+	local uptime = time_global()
+	if uptime <= time then return else 
+		time = time + math.random(70000, 220000) 
+	end -- срабатывает рандомно
+	ft = { 
+	prob1,
+	prob2,
+	prob3,
+	prob4,
+	prob5
+	}
+
+	ft[math.random(table.getn(ft))]()
+end
+
+--"Статус соединения:"
+local connect_templates = {
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]Communication restored.",
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]Signal reception resumed.",
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]Network connection...",
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]Signal strength restored.",
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]Server connection...",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Связь восстановлена.",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Приём сигнала возобновлён.",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Подключение к сети...",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Уровень сигнала восстановлен.",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Подключение к серверу...",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]ID опознан, система работает исправно. Выполняется подключение к сети...",
+	"%c[255,0,255,0]Admin_bmstu\\n%c[default]С возвращением, раздолбай!",
+	"%c[255,0,255,0]Admin_bmstu\\n%c[default]Подключение восстановлено, пользуйся на здоровье)"
+}
+
+local disconnect_templates = {
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Нет подключения к серверу.",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Связь прервана.",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Низкий уровень сигнала.",
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Прием невозможен, связь потеряна.",                  
+	"%c[255,0,255,0]PDA_EAS_rus\\n%c[default]Сигнал отсутствует.",
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]No connection to server.",
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]Connection terminated.",
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]Low signal level.",
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]Reception is impossible, communication is lost.",                  
+	"%c[255,0,255,0]PDA_Emergency_Alert_System\\n%c[default]No network signal."
+}
+
+--Вспомагательные функции
+function on_connect()
+	if math.random() < post_message_prob then
+		connect_templates = connect_templates[math.random(table.getn(connect_templates))]
+	end
+	if (connect_templates ~= "") then		
+		local news_text = connect_templates
+		db.actor:give_game_news(news_text, "ui\\ui_iconsTotal", Frect():set(498,235,83,47), 0, 13000)
+    end
+end
+
+function on_disconnect()
+	if math.random() < post_message_prob then
+		disconnect_templates = disconnect_templates[math.random(table.getn(disconnect_templates))]
+	end
+	if (disconnect_templates ~= "") then
+		local news_text = disconnect_templates
+		db.actor:give_game_news(news_text, "ui\\ui_iconsTotal", Frect():set(498,235,83,47), 0, 13000)
+	end
+end
+
+
+function isIsolatedLevel(level_name)
+	local result = false
+	local ln = level_name
+	if (ln == "l03u_agr_underground" or ln == "l04u_labx18" or ln == "l08u_brainlab" or ln == "l10u_bunker") then
+		result = true
+	end
+	return result
+end
+
+
+-- 04:30 - 07:00
+morning_templates = {
+	"Мужики, рассветает... красиво-то как.",
+	"Рассветает...",
+	"Утро начинается с кофе...Эх, надоела это дрянь растворимая, торгаш гад за нормальный кофе цену ломит!",
+	"Доброе утро всему местному люду.",
+	"Рассвело, хорошо. Пришлось в Рыжем Лесу заночевать - ох и страшная ночь была, аж поседел.",
+	"Утро сегодня хорошее, ясное. И все бы хорошо, если бы не ВСЁ",
+	"Парни, есть кто в Баре утром? Нужен Сорняк. Если кто видел - не выпускайте, он мне комбез с дыркой на жопе продал! Найду - урою",
+	"Народ, тут это, рассветает - думаю, можно уже выдвигаться, мало на кого теперь натолкнёмся, не то что ночью.",
+	"Рассвело. Выдвигаемся, сейчас более-менее безопасно.",
+	"Мужики, подъём! Утро уже!",
+	"Ребят, встаем! Скоро на пары...",
+	"Мужики, встаем! Говорят, у научников утром цены меньше!",
+	"Эх, мужики! Наконец-то светает, а то устал уже я дрожать от страха в темноте. Уж лучше при свете дня... дрожать...",
+	"Меня кто-нибудь слышит? Сегодня ночью пропала группа наших ребят. Должны были вернуться к утру с Агропрома. До сих пор нет. Через час отправляемся на поиски. Присоединяйтесь.",
+	"Чёрт, кто придумал утро... Сегодня ж всю ночь пили... Повар, сволочь, водку палёную опять притащил откуда-то... \"Свобода\", спим дальше... рейд на базу \"Долга\" подождёт...",
+	"Мужики, вы бы видели, какой тут на Янтаре рассвет. Это что-то... И страшно, и красиво... И трупы снорков так классно дрейфуют в искрящейся в утреннем солнце глади озера... Романтика..."
+}
+
+-- 20:30 - 22:00
+evening_templates = {
+	"Чёрт, мужики, вы как хотите, а я за хабаром сегодня уже не пойду. Ночь скоро...",
+	"Вроде только проснулся, а день уже прошел...",
+	"Мужики, уже вечер! Пора байки у костра травить.",
+	"Солнышко не долго светило...",
+	"Ччерт, скоро темень будет, а мне до ближайшего лагеря два километра!",
+	"Тааак, народ уже у костров сидит, пора рачехлять гитару.",
+	"Не, не пойду я уже никуда. Поздно уже, скоро дряни всякой повылазит...",
+	"Так, закат уже... потихоньку возвращайтесь, сейчас в Зоне небезопасно.",
+	"Идите-ка вы, мужики... в ночь... на кровососов... одни. Экстремалы, блин.",
+	"Ну что? Кто со мной пойдёт валить стаю псевдособак? А то я боюсь ночью в палатке спать, вдруг этот... тёмный... водички опять попросит... Уж лучше побродить где-нибудь...",
+	"Луна скоро взойдёт... Чёрт, не успеваю до лагеря добраться... Мужики есть кто поблизости? Чую, меня какая-то тварь уже преследует.",
+	"Всем внимание! Учёные сообщают о подозрительной активности мутантов на Янтаре этой ночью. Всем оставаться в лагерях."
+}
+
+
+-------------------- Advanced Reconstruction Stalker Mod v0.5 --------------------
+--[[
+
+If you're going to use the whole of this script or its parts in your own creative 
+developments for the S.T.A.L.K.E.R. game, please don't become such a goddamn 
+motherfucker like the notorious author of the ABC Mod - Carbrobro. Leave the 
+copyrights, note the real author(s) and don't claim others' ideas and their 
+realization to be your own ones. It's just simple Modmakers' Ethics. Thank you!
+
+Если вы собираетесь использовать данный скрипт целиком или частично в своих 
+разработках по игре S.T.A.L.K.E.R., пожалуйста не опускайтесь до уровня печально 
+известного автора ABC мода - Carbrobro. Не удаляйте копирайты, указывайте настоящего 
+автора(ов) и не выдавайте чужие идеи и их реализацию за свои. Ведь это элементарная 
+этика модостроителей! Спасибо за понимание.
+
+Methanol: выражаю благодарность OGS Evolution - team за основу динамических сообщений.
+Креативно сделано, авторы молодцы. Всем кто залез в конец файла желаю удачной ходки и лучшего хабара!
+
+]]--
