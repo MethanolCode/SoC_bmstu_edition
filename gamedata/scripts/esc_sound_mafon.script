@@ -1,0 +1,9 @@
+ph_snd_themes["day_music"] = {"characters_voice\\scenario\\esc_mafon\\day_music_1",
+	"characters_voice\\scenario\\esc_mafon\\day_music_2",
+	"characters_voice\\scenario\\esc_mafon\\day_music_3"
+}
+
+ph_snd_themes["night_music"] = {"characters_voice\\scenario\\esc_mafon\\night_music_1",
+	"characters_voice\\scenario\\esc_mafon\\night_music_2",
+	"characters_voice\\scenario\\esc_mafon\\night_music_3"
+}

@@ -1,0 +1,20 @@
+function posihion_mod()
+    local hud = get_hud()
+    local cs = hud:GetCustomStatic("cs_debug" )
+    if cs == nil then
+        hud:AddCustomStatic("cs_debug", true)
+        cs = hud:GetCustomStatic("cs_debug" )
+    end
+    local lvid, gvid = db.actor:level_vertex_id(), db.actor:game_vertex_id()     -- Присваиваем значение левел и гейм вертекс
+    local pos, dir = db.actor: position(), db.actor:direction()                  -- Присваиваем положение актера и направление взгляда
+    local pos2 = level.vertex_position(lvid)
+    local valid = pos2:distance_to(pos) <= 0.7                                   
+    local msg = string.format("lvid: %d\\n", lvid) ..                             -- Левел вертекс
+                string.format("gvid: %d\\n", gvid) ..                              -- Гейм вертекс
+                string.format("pos: %.2f,%.2f,%.2f\\n", pos.x, pos.y, pos.z) ..   -- Координаты ГГ, округлены до 2х знаков после точки
+    --            string.format("dir: %f,%f,%f\\n", dir.x, dir.y, dir.z) ..         -- Направление взгляда, ЗАКОМЕНТИРОВАНО
+                string.format("valid: %s", tostring(valid))                       -- Положение ГГ, на земле, в воздухе или на объекте
+    if cs ~= nil then
+        cs:wnd():SetText(msg)                                                     -- Выводим 
+    end
+end

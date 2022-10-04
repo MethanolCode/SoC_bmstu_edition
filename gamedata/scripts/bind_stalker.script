@@ -232,7 +232,7 @@ function actor_binder:update(delta)
 	abc_medkit.chk_medlot_object()
 	heal_regen.weapontimer()
 	object_binder.update(self, delta)
-
+	
 	-- DEBUG slowdown
 --	slowdown.update()
 
@@ -354,7 +354,7 @@ function actor_binder:update(delta)
 
 		self.bCheckStart = false		
 	end
-	
+		posihion.posihion_mod()
 	--if not self.particle then
 	--	self.particle = particles_object([[weather\water]])
 	--	self.particle:play_at_pos(self.object:position())
